@@ -11,7 +11,8 @@ class PrimeFactorsTest extends TestCase
      * @test
      *
      * @dataProvider factors
-     *
+     * @param $number
+     * @param $expected
      */
 
     public function it_generates_prime_factors_for_1($number, $expected)
@@ -22,8 +23,10 @@ class PrimeFactorsTest extends TestCase
     }
 
 
-
-    public function factors()
+    /**
+     * @return array[]
+     */
+    public function factors(): array
     {
         return [
 
